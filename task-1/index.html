@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="content-wrapper">
+            <!-- 1. HTML Content -->
+            <h1><span id="typing-text"></span><span class="typing-cursor"></span></h1>
+            <p class="intro-text">This page demonstrates the basics of HTML, CSS, and JavaScript.</p>
+            
+            <img src="https://assets.cntraveller.in/photos/67d164d9516e7e0b9716809c/master/w_1600%2Cc_limit/Monaco%2520Grand%2520Prix_GettyImages-2153966297.jpg" 
+                 alt="Placeholder image"
+                 onerror="this.onerror=null;this.src='https://placehold.co/800x400/cccccc/ffffff?text=Image+Error';">
+    
+            <h2 class="reveal-target">Core Technologies</h2>
+            <div class="blocks reveal-target">
+                <div class="block">
+                    <strong>HTML</strong>
+                    <p>Provides the fundamental structure and skeleton for all web content.</p>
+                </div>
+                <div class="block">
+                    <strong>CSS</strong>
+                    <p>Styles the content, handling everything from colors and fonts to complex layouts.</p>
+                </div>
+                <div class="block">
+                    <strong>JavaScript</strong>
+                    <p>Makes the page interactive, responding to user actions and creating dynamic experiences.</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 3rem;">
+                Get internship at 
+                <a href="https://apexplanet.in/" target="_blank">Apex Planet</a>.
+            </p>
+    
+            <button id="interactiveButton">Click Me!</button>
+        </div>
+    </div>
+
+    <!-- Custom Modal for the button click -->
+    <div id="customModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Hello There!</h3>
+            <p>You've triggered a JavaScript event. This pop-up is a more user-friendly alternative to the default browser alert.</p>
+            <button id="closeModalBtn" class="modal-close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* A simplified but attractive stylesheet for a beginner project. */
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --background-color: #f3f4f6;
+    --surface-color: #ffffff;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    background-color: var(--surface-color);
+    padding: 4rem 2rem; /* More vertical padding */
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+     max-width: 900px;
+     width: 100%;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    min-height: 60px; /* Prevent layout shift */
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+/* Typing cursor effect */
+.typing-cursor {
+    display: inline-block;
+    width: 4px;
+    height: 3rem;
+    background-color: var(--primary-color);
+    animation: blink 0.7s infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+p {
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    max-width: 700px; /* Keep paragraphs readable */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    margin: 2.5rem 0;
+    box-shadow: var(--shadow);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+}
+
+/* New Section Styles */
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.block {
+    flex: 1;
+    min-width: 250px;
+    background: var(--background-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.block:nth-child(2) { transition-delay: 0.1s; }
+.block:nth-child(3) { transition-delay: 0.2s; }
+
+.block strong {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+/* Modal Styles for a nicer alert */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    margin-bottom: 2rem;
+}
+
+.modal-close-btn {
+    background: #e5e7eb;
+    color: #374151;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+}
+.modal-close-btn:hover {
+    background: #d1d5db;
+}
