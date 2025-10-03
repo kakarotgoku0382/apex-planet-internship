@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3: Advanced Project</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Advanced Interactive Project</h1>
+
+        <div class="main-layout">
+            <!-- Section 1: Image Carousel -->
+            <div class="section">
+                <h2>Image Carousel</h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="https://t3.ftcdn.net/jpg/04/50/93/28/360_F_450932899_1QGW4LoQ8EFFNTSRr8fMTxTl4N3gZTc3.jpg" alt="Placeholder Image 1">
+                            <img src="https://wallpapers.com/images/hd/god-of-war-5-v78grhtfkjsau2lc.jpg" alt="Placeholder Image 2">
+                            <img src="https://wallpapers.com/images/hd/red-dead-redemption-2-full-hd-a242sno6kwo4mr52.jpg" alt="Placeholder Image 3">
+                            <img src="https://backiee.com/static/wallpapers/1000x563/399160.jpg" alt="Placeholder Image 4">
+                        </div>
+                        <button id="prevBtn" class="carousel-btn">&lt;</button>
+                        <button id="nextBtn" class="carousel-btn">&gt;</button>
+                    </div>
+                    <div class="carousel-dots"></div>
+                </div>
+            </div>
+
+            <!-- Section 2: Interactive Quiz -->
+            <div class="section">
+                <h2>Quick Quiz</h2>
+                <div id="quiz-container">
+                    <p id="question-text">Question goes here...</p>
+                    <div id="options-container"></div>
+                    <p id="quiz-result"></p>
+                    <button id="restart-quiz-btn">Restart Quiz</button>
+                </div>
+            </div>
+
+            <!-- Section 3: API Data Fetch -->
+            <div class="section api-section">
+                <h2>Random Joke Generator (API)</h2>
+                <div id="joke-container">
+                    <p id="joke-setup">Click the button to fetch a joke!</p>
+                    <p id="joke-punchline">And here's the punchline!</p>
+                </div>
+                <div style="text-align: center;">
+                    <button id="fetch-joke-btn">Get New Joke</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
