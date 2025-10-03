@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | To-Do | Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">personal portfolio</div>
+    <div class="nav-links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#todo">To-Do</a>
+      <a href="#shop">Shop</a>
+    </div>
+  </nav>
+
+  <section id="portfolio">
+  <h2>👩‍💻 Personal Portfolio</h2>
+  <div class="portfolio-wrapper">
+    <div class="portfolio-card">
+      <img src="https://i.pinimg.com/474x/86/79/28/8679283ebf101f9d9671c5744d3d5e56.jpg" alt="Profile Image" class="profile-pic" />
+      <h3>ARTHUR MORGAN</h3>
+      <p>Frontend Developer passionate about crafting beautiful and functional websites.</p>
+      <p>Email: <a href="mailto:xyz@gmail.com">arthurmorgan@gmail.com</a></p>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+      </div>
+      <div class="social-links">
+        <a href="#" target="_blank">🌐 Portfolio</a>
+        <a href="#" target="_blank">💼 LinkedIn</a>
+        <a href="#" target="_blank">📁 GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="todo">
+    <h2>✅ To-Do List</h2>
+    <div class="todo-container">
+      <input type="text" id="todo-input" placeholder="Add a task..." />
+      <button onclick="addTask()">Add</button>
+      <ul id="todo-list"></ul>
+    </div>
+  </section>
+
+  <section id="shop">
+  <h2>🛍️ Stylish Shop</h2>
+  <div class="shop-grid">
+    <div class="product">
+      <img src="https://cpimg.tistatic.com/08521053/b/4/Jordan-Shoes-Retro-6.jpg" alt="Shoes" />
+      <h4>Shoes</h4>
+      <p>₹999</p>
+      <input type="number" min="1" value="1" id="qty-shoes" />
+      <button onclick="addToCart('Shoes', 999, 'qty-shoes')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://images-cdn.ubuy.co.in/66d809d73f144b11084e13fa-american-tourister-32-ltrs-black-casual.jpg" alt="Bag" />
+      <h4>Bag</h4>
+      <p>₹599</p>
+      <input type="number" min="1" value="1" id="qty-bag" />
+      <button onclick="addToCart('Bag', 599, 'qty-bag')">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYsTtCfu6kjmVfsXdlptsG3gqoxI27owkzzA&s" alt="Watch" />
+      <h4>Watch</h4>
+      <p>₹1299</p>
+      <input type="number" min="1" value="1" id="qty-watch" />
+      <button onclick="addToCart('Watch', 1299, 'qty-watch')">Add to Cart</button>
+    </div>
+  </div>
+
+  <h3>🧺 Cart Items</h3>
+  <ul id="cart-list"></ul>
+  <div id="cart-total">Total: ₹0</div>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right,#9dace5,#b6d4d6);
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: linear-gradient(to right,#2c3e50,#34495e);
+  color: rgb(239, 210, 210);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow:0 4px 8px rgba(0,0,0,0.15);
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.nav-links a {
+  color: rgb(173, 162, 246);
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00b894;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin:40px auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+h2::after{
+    content: "";
+    width: 60px;
+    height:4px;
+    background: #27ae60;
+    display: block;
+    margin:8px auto 0;
+    border-radius:2px;
+}
+
+.portfolio-card {
+  background: rgb(105, 97, 97);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border: 2px solid black;
+}
+
+.portfolio-card h3 {
+  color: #27ae60;
+}
+
+.portfolio-card a {
+  color: #0984e3;
+  text-decoration: none;
+}
+
+.todo-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.todo-container input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.todo-container button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-container button:hover {
+  background: #219150;
+}
+
+#todo-list li {
+  margin-top: 10px;
+  background: #f1f2f6;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#todo-list li button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.shop-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product {
+  background: rgb(244, 216, 216);
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.product button:hover{
+    background: #066ec0;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#cart-list li {
+  background: #fff;
+  margin: 8px 0;
+  padding: 10px;
+  border-left: 5px solid #27ae60;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+#cart-total {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.product button {
+  margin-top: 10px;
+  background: #0984e3;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background: #066ec0;
+}
+
+#cart-list {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-links a {
+    margin: 5px 0;
+  }
+}
+
+.portfolio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-card {
+  background: rgb(250, 251, 253);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.portfolio-card h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.portfolio-card p {
+  color: #555;
+  margin: 5px 0;
+}
+
+.portfolio-card a {
+  color: #0984e3;
+  text-decoration: none;
+}
+
+.skills {
+  margin-top: 15px;
+}
+
+.skills span {
+  background: #dff9fb;
+  color: #130f40;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #27ae60;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #2ecc71;
+}
+/* Section spacing between cards */
+.shop-grid,
+.todo-container,
+.portfolio-wrapper {
+  margin-top: 20px;
+}
+
+/* Enhance cart section bg */
+#cart-list,
+#cart-total {
+  background: #f3f3fa;
+  padding: 10px;
+  border-radius: 10px;
+}
